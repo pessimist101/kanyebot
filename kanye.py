@@ -21,9 +21,10 @@ class Kanye(commands.Cog):
             data = await session.get('https://api.kanye.rest')
             data = await data.json()
             quote = data['quote']
-        embed = discord.Embed(colour=discord.Colour(0x4169e1), description=quote)
+        ROYAL_BLUE = 0x4169e1
+        embed = discord.Embed(colour=discord.Colour(ROYAL_BLUE), description=quote)
         await ctx.message.delete()
-        await ctx.send(embed)
+        await ctx.send(embed=embed)
 
 def setup(client):
     client.add_cog(Kanye(client))
