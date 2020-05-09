@@ -23,7 +23,7 @@ class Kanye(commands.Cog):
             quote = data['quote']
         ROYAL_BLUE = 0x4169e1
         embed = discord.Embed(colour=discord.Colour(ROYAL_BLUE), description=quote)
-        await ctx.message.delete()
+        # await ctx.message.delete()
         await ctx.send(embed=embed)
 
 def setup(client):
